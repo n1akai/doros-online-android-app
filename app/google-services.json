@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "473790928124",
+    "firebase_url": "https://doros-online-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "doros-online",
+    "storage_bucket": "doros-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473790928124:android:6bb4b814b27e8dc6eb3379",
+        "android_client_info": {
+          "package_name": "ma.n1akai.dorosonline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-_IrV0PPoc0ftjSDMSq7s1fDExmhv1_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

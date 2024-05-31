@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ma.n1akai.dorosonline.ui.home.HomeFragment"
+        android:label="Doros Online"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_addUpdateCourseFragment"
+            app:destination="@id/addUpdateCourseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateCourseFragment"
+        android:name="ma.n1akai.dorosonline.ui.home.course.AddUpdateCourseFragment"
+        android:label="Ajouter"
+        tools:layout="@layout/fragment_add_update_course" >
+        <argument
+            android:name="course"
+            app:argType="ma.n1akai.dorosonline.data.model.Course"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="ma.n1akai.dorosonline.ui.home.course.CourseFragment"
+        android:label="{courseTitle}"
+        tools:layout="@layout/fragment_course">
+        <argument
+            android:name="course"
+            app:argType="ma.n1akai.dorosonline.data.model.Course" />
+        <argument
+            android:name="courseTitle"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_courseFragment_to_addUpdateCourseFragment"
+            app:destination="@id/addUpdateCourseFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+</navigation>
